@@ -1,0 +1,11 @@
+#installing Pillow for images
+#   pip3 install Pillow==5.0.0
+
+#Support media
+# 1.In project urls.py file
+#   from django.conf import settings
+#   from django.conf.urls.static import static
+#   +static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)
+#  2.In project settings.py file
+#   MEDIA_URL='trinath'
+#   MEDIA_ROOT= os.path.join(BASE_DIR,'media')
