@@ -9,3 +9,14 @@
 #  2.In project settings.py file
 #   MEDIA_URL='trinath'
 #   MEDIA_ROOT= os.path.join(BASE_DIR,'media')
+
+
+#adding static staticfiles
+#1.In settings
+# STATICFILES_DIR = [
+#     os.path.join(BASE_DIR,'portfolio/static')
+# ]
+# STATIC_ROOT = os.path.join(BASE_DIR,'static')
+# STATIC_URL = '/static/'
+#2. run following command
+#python manage.py collectstatic
