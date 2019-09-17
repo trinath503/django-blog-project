@@ -5,7 +5,7 @@
   <a href="#Tech-Stack">Tech-Stack</a> •
   <a href="#Login-Information">Login-Information</a> •
   <a href="#Problems">Problems</a> •
-  <a href="#scripts">Uplaod Script</a> •
+  <a href="#scripts">Script</a> •
 </p>
 
 
