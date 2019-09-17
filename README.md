@@ -24,9 +24,13 @@
 - Install docker & docker composer, [Installation Guide](https://docs.google.com/document/d/1DAoNNX8xjUm53rHAAz2VrVI5b77teguNBx4uccrPQ9A/edit?usp=sharing)
 - For Devlopment --- docker-compose -f docker-compose.dev.yml up --build 
   For Production --- docker-compose -f docker-compose.build.yml up --build 
-  
-- Generate datasets using google images
-- User authentication system
+  <ul>
+  <li>First time it will take time to pull images used in dockerfile and install all node & python packages</li>
+  <li>Basically docker-compose will create new container (use same if already exist with the same name) sepearated one for frontend (webclient), second for backend server(webserver), third for webworker(for running message queue tasks) and finally database(monngo) [Note: In futher release we will remove it, since migrated to online db storeage(atlas mongo) ] </li>
+  <li>To terminate it crtl+c &  docker-compose down (mandatory)</li>
+  <li></li>
+  </ul>
+- (optional) cd scripts/ & pip install -r requirements.txt 
 
 
 # Tech Stack
