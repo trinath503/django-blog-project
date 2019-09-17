@@ -1,14 +1,15 @@
 <p align="center"><img src="https://neuralmarker-logos.s3-us-west-2.amazonaws.com/logo.png"></p>
 
 <p align="center">
-  <a href="#features">Features</a> •
-  <a href="https://github.com/jsbroks/coco-annotator/wiki">Wiki</a> •
-  <a href="https://github.com/jsbroks/coco-annotator/wiki/Getting-Started">Getting Started</a> •
-  <a href="https://github.com/jsbroks/coco-annotator/issues">Issues</a> •
+  <a href="#Get-Started">Get-Started</a> •
+  <a href="#Tech-Stack">Tech-Stack</a> •
+  <a href="#Login-Information">Login-Information</a> •
+  <a href="#Problems">Problems</a> •
+  <a href="#scripts">Uplaod Script</a> •
 </p>
 
 
-# Get Started
+# Get-Started
 - Install docker & docker composer, [Installation Guide](https://docs.google.com/document/d/1DAoNNX8xjUm53rHAAz2VrVI5b77teguNBx4uccrPQ9A/edit?usp=sharing)
 - For Devlopment --- docker-compose -f docker-compose.dev.yml up --build 
   For Production --- docker-compose -f docker-compose.build.yml up --build 
@@ -21,7 +22,7 @@
 - (optional) cd scripts/ & pip install -r requirements.txt 
 
 
-# Tech Stack
+# Tech-Stack
 ### Frontend
 
 - [Vue](https://vuejs.org/) - JavaScript framework for building user interfaces
@@ -31,7 +32,7 @@
 
 ### Backend
 
-- [Flask](http://flask.pocoo.org/) - Python web microframework
+- [Flask](https://github.com/pallets/flask) - Python web microframework
 - [MongoDB](https://www.mongodb.com/) - Cross-platform document-oriented database
 - [MongoEngine](http://mongoengine.org/) - Python object data mapper for MongoDB
 - [Celery](http://www.celeryproject.org/) - Distributed message passing
@@ -41,15 +42,47 @@
 
 - AWS S3 - For distriuted image storage
 - AWS SES - Sending emails for registratio verification & others
-- [Atlas mongo[(https://cloud.mongodb.com) - For cloud database storage
+- [Atlas mongo](https://cloud.mongodb.com) - For cloud database storage
 - [Celery](http://www.celeryproject.org/) - Distributed message passing
 - [DescriptionRabbitMQ](http://mongoengine.org/) - Advanced Message Queuing Protocol 
 
 
 
-# Demo
-| Login Information      |
+# Login-Information
+| APP Login       |
 | ---------------------- |
-| **Username:** admin    |
+| **Username:** neuraltest    |
 | **Password:** Noida12  |
 
+| DB Login      |
+| ---------------------- |
+| **mongo shell connect :** mongo "mongodb+srv://neuralmarkertest-nqlbs.mongodb.net/test" --username mongotest    |
+| **Password:** Noida12  |
+
+
+# Problems
+<p> If you have any issue while running or re-starting the app, Please follow below instructions </p>
+  <ul>
+  <li>Due to npm cache run this command : npm cache clean --force </li>
+  <li>Delete all node modelues in client/ folder </li>
+  <li>It might be due to already running conntainers: sudo docker rm $(sudo docker ps -aq) (which will remove all exsiting container forcefully, you can delete on your of troubling container )</li>
+  <li>Due to mongo running, so stop it by running this command : sudo service mongo stop (ubuntu command)</li>
+  </ul>
+
+# scripts
+<p> If code is running on local machine, in order to reflect uploaded gdrive/aws/csv resource data which were added while creating dataset - Need to run ptyhon script.  </p>
+ <ul>
+  <li>cd scripts/ </li>
+  <li>python BackendCronJobs.py </li>
+  </ul>
+ <p> (optional) Creating new record for plans table  </p>
+ <ul>
+  <li>cd scripts/ </li>
+  <li>python insert_plansmodel.py --plan_name "Free Trail" </li>
+  </ul>
+  
+  <p> (optional) Creating new record for pre-train-mdeols table t</p>
+ <ul>
+  <li>cd scripts/ </li>
+  <li>python insert_pretrainedmodel.py --model_name "face 65" --model_file face_shape_65.dat --categories 1,2,3</li>
+  </ul>
