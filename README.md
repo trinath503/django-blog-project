@@ -8,18 +8,6 @@
 </p>
 
 
-<p align="center"><img width="600" src="https://i.imgur.com/m4RmjCp.gif"></p>
-<p align="center"><i>Note: This video is from v0.1.0 and many new features have been added.</i></p>
-
-<br>
-<p align="center">If you enjoy my work please consider supporting me</p>
-<p align="center">
-  <a href="https://www.patreon.com/jsbroks">
-    <img src="https://c5.patreon.com/external/logo/become_a_patron_button@2x.png" width="120">
-  </a>
-</p>
-<br>
-
 # Get Started
 - Install docker & docker composer, [Installation Guide](https://docs.google.com/document/d/1DAoNNX8xjUm53rHAAz2VrVI5b77teguNBx4uccrPQ9A/edit?usp=sharing)
 - For Devlopment --- docker-compose -f docker-compose.dev.yml up --build 
